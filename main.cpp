@@ -17,17 +17,20 @@ int main(int argc, char *argv[])
     int screenWidth = screenGeometry.width();
     int screenHeight = screenGeometry.height();
     
-    // Calculate window dimensions (split screen in half)
-    int windowWidth = screenWidth / 2;
-    int windowHeight = 400;  // Fixed height for better visibility
+    // Calculate window dimensions (split screen in half with proper spacing)
+    int windowWidth = screenWidth / 2 - 15;  // Account for margins and gap
+    int windowHeight = screenHeight * 2 / 3;  // Use 2/3 of screen height for better proportions
     
-    // Position first window on the left
-    w1.setGeometry(0, (screenHeight - windowHeight) / 2, windowWidth - 10, windowHeight);
+    // Calculate vertical centering
+    int yPosition = (screenHeight - windowHeight) / 2;
+    
+    // Position first window on the left with margin
+    w1.setGeometry(10, yPosition, windowWidth, windowHeight);
     w1.setWindowTitle("Window 1");
     w1.show();
     
-    // Position second window on the right
-    w2.setGeometry(windowWidth + 10, (screenHeight - windowHeight) / 2, windowWidth - 10, windowHeight);
+    // Position second window on the right with margin
+    w2.setGeometry(screenWidth / 2 + 5, yPosition, windowWidth, windowHeight);
     w2.setWindowTitle("Window 2");
     w2.show();
     
