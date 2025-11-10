@@ -17,6 +17,10 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void onSubmitClicked();
+    void onClearClicked();
+
 private:
     Ui::Widget *ui;
 };

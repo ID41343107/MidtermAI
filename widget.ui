@@ -11,21 +11,240 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>MidtermAI - 使用者介面</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>100</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f5f5f5;
+}
+
+QLabel {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #21618c;
+}
+
+QLineEdit {
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3498db;
+}
+
+QTextEdit {
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+QTextEdit:focus {
+    border: 2px solid #3498db;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>20</number>
    </property>
-   <property name="text">
-    <string>點</string>
+   <property name="leftMargin">
+    <number>30</number>
    </property>
-  </widget>
+   <property name="topMargin">
+    <number>30</number>
+   </property>
+   <property name="rightMargin">
+    <number>30</number>
+   </property>
+   <property name="bottomMargin">
+    <number>30</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>歡迎使用 MidtermAI 系統</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_1">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="nameLabel">
+       <property name="text">
+        <string>姓名：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="nameLineEdit">
+       <property name="placeholderText">
+        <string>請輸入您的姓名</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="emailLabel">
+       <property name="text">
+        <string>電郵：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="emailLineEdit">
+       <property name="placeholderText">
+        <string>請輸入您的電郵地址</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="messageLabel">
+       <property name="text">
+        <string>訊息：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="messageTextEdit">
+       <property name="placeholderText">
+        <string>請輸入您的訊息</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer_1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="submitButton">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>提交</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearButton">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #95a5a6;
+}
+
+QPushButton:hover {
+    background-color: #7f8c8d;
+}
+
+QPushButton:pressed {
+    background-color: #5d6d7e;
+}</string>
+       </property>
+       <property name="text">
+        <string>清除</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string>就緒</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #27ae60;
+    font-size: 12px;
+    font-weight: normal;
+}</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
